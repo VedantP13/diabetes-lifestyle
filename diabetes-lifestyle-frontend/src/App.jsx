@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE = "http://localhost:4000/api";
+// const API_BASE = "http://localhost:4000/api";
+const API_BASE = "https://diabetes-lifestyle.onrender.com/api";
+
 
 function App() {
   const [questionnaire, setQuestionnaire] = useState(null);
