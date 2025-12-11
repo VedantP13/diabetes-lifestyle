@@ -1,0 +1,515 @@
+{
+  "version": "1.0",
+  "sections": [
+    {
+      "id": "profile",
+      "title": "Basic Details",
+      "questions": [
+        {
+          "id": "age",
+          "label": "Age",
+          "type": "number",
+          "required": true,
+          "min": 18,
+          "max": 90
+        },
+        {
+          "id": "sex",
+          "label": "Sex",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Male", "Female", "Other"]
+        },
+        {
+          "id": "diet_type",
+          "label": "Diet type",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Vegetarian (no eggs)",
+            "Vegetarian (eggs allowed)",
+            "Non-vegetarian",
+            "Vegan"
+          ]
+        },
+        {
+          "id": "work_pattern",
+          "label": "Your work pattern",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Mostly sitting (office / driving / screen work)",
+            "Mixed sitting and moving",
+            "Mostly active (on feet, manual work)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medical",
+      "title": "Medical & Lab Information",
+      "questions": [
+        {
+          "id": "has_diabetes",
+          "label": "Have you been told you have diabetes by a doctor?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "No", "Not sure"]
+        },
+        {
+          "id": "diabetes_medication",
+          "label": "Are you currently taking medication for blood sugar?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "No"]
+        },
+        {
+          "id": "hbA1c",
+          "label": "Most recent HbA1c (if known, in %)",
+          "type": "number",
+          "required": false,
+          "min": 4.0,
+          "max": 15.0
+        },
+        {
+          "id": "fasting_glucose",
+          "label": "Most recent fasting blood sugar (mg/dL)",
+          "type": "number",
+          "required": false,
+          "min": 50,
+          "max": 500
+        },
+        {
+          "id": "pp_glucose",
+          "label": "Most recent 2-hour post-meal blood sugar (mg/dL)",
+          "type": "number",
+          "required": false,
+          "min": 50,
+          "max": 600
+        },
+        {
+          "id": "triglycerides",
+          "label": "Most recent triglycerides (mg/dL)",
+          "type": "number",
+          "required": false,
+          "min": 30,
+          "max": 2000
+        },
+        {
+          "id": "b12_status",
+          "label": "Vitamin B12 status",
+          "type": "single_choice",
+          "required": false,
+          "options": [
+            "Normal",
+            "Low before",
+            "Never tested",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "vitd_status",
+          "label": "Vitamin D status",
+          "type": "single_choice",
+          "required": false,
+          "options": [
+            "Normal",
+            "Low before",
+            "Never tested",
+            "Not sure"
+          ]
+        },
+        {
+          "id": "female_menopause_stage",
+          "label": "If you are female, your current menstrual/menopause stage",
+          "type": "single_choice",
+          "required": false,
+          "options": [
+            "Not applicable / male / other",
+            "Regular cycles (premenopausal)",
+            "Perimenopausal (irregular, approaching menopause)",
+            "Menopausal / Postmenopausal",
+            "Not sure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "title": "Sleep Pattern",
+      "questions": [
+        {
+          "id": "sleep_bedtime",
+          "label": "What time do you usually go to bed?",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Before 10 pm",
+            "10–11:30 pm",
+            "After 11:30 pm"
+          ]
+        },
+        {
+          "id": "sleep_duration",
+          "label": "How many hours do you usually sleep per night?",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Less than 5 hours",
+            "5–6 hours",
+            "6–7 hours",
+            "7–8 hours",
+            "More than 8 hours"
+          ]
+        },
+        {
+          "id": "sleep_restfulness",
+          "label": "Do you wake up feeling rested?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Rarely", "Sometimes", "Often"]
+        },
+        {
+          "id": "sleep_screens_before",
+          "label": "Do you use mobile/TV/laptop in the last 30 minutes before sleep?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Never"]
+        },
+        {
+          "id": "sleep_night_waking",
+          "label": "Do you wake up at night and find it hard to sleep again?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Rarely", "Sometimes", "Often"]
+        },
+        {
+          "id": "sleep_snoring",
+          "label": "Has anyone noticed loud snoring or pauses in your breathing during sleep?",
+          "type": "single_choice",
+          "required": false,
+          "options": ["Yes", "No", "Not sure"]
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food Pattern & Habits",
+      "questions": [
+        {
+          "id": "meals_per_day",
+          "label": "How many main meals do you eat per day?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["2", "3", "4 or more"]
+        },
+        {
+          "id": "dinner_time",
+          "label": "What time is your usual last meal (dinner)?",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Before 7 pm",
+            "7–8 pm",
+            "8–9:30 pm",
+            "After 9:30 pm"
+          ]
+        },
+        {
+          "id": "dinner_sleep_gap",
+          "label": "Gap between dinner and sleep",
+          "type": "single_choice",
+          "required": true,
+          "options": [
+            "Less than 1 hour",
+            "1–2 hours",
+            "2–3 hours",
+            "More than 3 hours"
+          ]
+        },
+        {
+          "id": "eating_speed",
+          "label": "How fast do you usually eat?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Very fast", "Fast", "Moderate", "Slow"]
+        },
+        {
+          "id": "chewing",
+          "label": "Do you chew each mouthful thoroughly (around 15–20 times)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Rarely", "Never"]
+        },
+        {
+          "id": "screens_while_eating",
+          "label": "Do you usually watch TV or mobile while eating?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Never"]
+        },
+        {
+          "id": "outside_food_freq",
+          "label": "How often do you eat outside (hotel/restaurant/street food) per week?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0–1", "2–3", "4–5", "More than 5"]
+        },
+        {
+          "id": "fried_food_outside",
+          "label": "When you eat outside, how often is it fried/oily food (dosa, fried snacks, etc.)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Rarely", "Sometimes", "Often", "Almost always"]
+        },
+        {
+          "id": "milk_tea_coffee_freq",
+          "label": "How many cups of milk/tea/coffee do you drink daily?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["None", "1–2", "3–4", "5 or more"]
+        },
+        {
+          "id": "milk_timing_vs_breakfast",
+          "label": "When do you usually have your first tea/coffee/milk compared to breakfast?",
+          "type": "single_choice",
+          "required": false,
+          "options": [
+            "More than 1 hour before breakfast",
+            "Within 1 hour before breakfast",
+            "With breakfast",
+            "After breakfast",
+            "I don’t take it"
+          ]
+        },
+        {
+          "id": "tea_coffee_sugar",
+          "label": "Do you add sugar to tea/coffee?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Rarely", "Never"]
+        },
+        {
+          "id": "artificial_sweetener",
+          "label": "Do you use artificial sweetener pills or powders?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Daily", "Sometimes", "Rarely", "Never"]
+        },
+        {
+          "id": "snacks_with_tea",
+          "label": "Do you usually have biscuits/snacks with tea/coffee?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Never"]
+        },
+        {
+          "id": "fruit_days_per_week",
+          "label": "How many days per week do you eat whole fruits?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0", "1–2", "3–5", "6–7"]
+        },
+        {
+          "id": "fruit_types_main",
+          "label": "Which fruits do you eat most often? (choose all that apply)",
+          "type": "multi_choice",
+          "required": false,
+          "options": [
+            "Guava",
+            "Papaya",
+            "Apple",
+            "Orange/Mosambi",
+            "Banana",
+            "Mango",
+            "Grapes",
+            "Watermelon/Muskmelon",
+            "Custard apple/Sitaphal",
+            "Berries (when available)",
+            "Jamun (seasonal)",
+            "Other"
+          ]
+        },
+        {
+          "id": "high_sugar_fruit_freq",
+          "label": "How often do you eat high-sugar fruits (banana, mango, grapes, custard apple)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Once a week", "2–3× per week", "Almost daily"]
+        },
+        {
+          "id": "night_veg_gourd_group_freq",
+          "label": "How many days per week do you eat vegetables like snake gourd, bottle gourd, ridge gourd, bitter gourd, ladies finger (okra), chow-chow (chayote), knol-khol?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0–1", "2–3", "4–5", "6–7"]
+        },
+        {
+          "id": "indigestion_freq",
+          "label": "After meals, do you often feel gas, bloating, heaviness or indigestion?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Rarely", "Sometimes", "Often"]
+        },
+        {
+          "id": "pure_veg_no_dairy",
+          "label": "Are you pure vegetarian AND have you stopped milk/dairy products?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "No"]
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "title": "Physical Activity & Sitting",
+      "questions": [
+        {
+          "id": "walk_minutes_per_day",
+          "label": "On most days, how many minutes do you walk (total)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0–10", "10–30", "30–60", "More than 60"]
+        },
+        {
+          "id": "sitting_hours_per_day",
+          "label": "How many hours per day do you sit (work, TV, travel)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Less than 4", "4–6", "6–8", "More than 8"]
+        },
+        {
+          "id": "structured_exercise",
+          "label": "Do you do any structured exercise (yoga, gym, sports, dance)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["No", "1–2× per week", "3–5× per week", "Daily"]
+        },
+        {
+          "id": "uphill_walk_freq",
+          "label": "How often do you walk on slopes, hills or do trekking?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "Once a month", "Once a week", "2 or more times per week"]
+        },
+        {
+          "id": "uphill_sugar_effect",
+          "label": "If you have done uphill walks/treks, do you notice better sugar readings next morning?",
+          "type": "single_choice",
+          "required": false,
+          "options": ["Yes", "Sometimes", "No difference", "I don’t check", "I don’t do uphill walks"]
+        },
+        {
+          "id": "can_walk_15_min",
+          "label": "Can you comfortably walk for 15 minutes without chest pain or severe breathlessness?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "No", "Not sure"]
+        },
+        {
+          "id": "heel_raise_possible",
+          "label": "Can you do simple seated heel raises for 5–10 minutes?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "Probably", "No (leg/foot problem)"]
+        }
+      ]
+    },
+    {
+      "id": "sunlight",
+      "title": "Sunlight & Vitamin D",
+      "questions": [
+        {
+          "id": "sun_days_per_week",
+          "label": "On how many days per week do you get at least 10 minutes of sun on your arms/face?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0", "1–2", "3–5", "6–7"]
+        },
+        {
+          "id": "mostly_indoors",
+          "label": "Do you mostly work indoors, away from natural sunlight?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "No"]
+        },
+        {
+          "id": "avoid_sun_for_skin",
+          "label": "Do you purposely avoid sunlight (for skin/fashion reasons)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes", "Sometimes", "No"]
+        }
+      ]
+    },
+    {
+      "id": "happiness_stress",
+      "title": "Happiness, Stress & Fear",
+      "questions": [
+        {
+          "id": "job_stress",
+          "label": "How stressful is your job or main daily work?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Very high", "High", "Moderate", "Low"]
+        },
+        {
+          "id": "duty_responsibility",
+          "label": "Do you feel your work requires constant attention and mistakes can harm others? (duty-type stress)",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Rarely"]
+        },
+        {
+          "id": "performance_fear",
+          "label": "Do you often feel fear about performance, losing your job, or money?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Rarely/Never"]
+        },
+        {
+          "id": "general_worry",
+          "label": "Do you often worry that something bad may happen (health, accidents, thieves, etc.)?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Always", "Often", "Sometimes", "Rarely/Never"]
+        },
+        {
+          "id": "checking_behaviour",
+          "label": "Do you repeatedly check locks/gas/switches many times due to worry?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Yes daily", "Sometimes", "Rarely", "Never"]
+        },
+        {
+          "id": "close_people_to_share",
+          "label": "How many close people can you share your true feelings with?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0", "1", "2–3", "4 or more"]
+        },
+        {
+          "id": "laugh_loud_freq",
+          "label": "How often do you laugh out loud (not just smile) in a typical day?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["0", "1–2 times", "3–5 times", "More than 5 times"]
+        },
+        {
+          "id": "comedy_content_freq",
+          "label": "How often do you watch or listen to comedy/light-hearted content?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Never", "1–2× per week", "3–5× per week", "Daily"]
+        },
+        {
+          "id": "gratitude_feeling",
+          "label": "Do you generally feel happy and grateful about your life?",
+          "type": "single_choice",
+          "required": true,
+          "options": ["Rarely", "Sometimes", "Often", "Almost always"]
+        }
+      ]
+    }
+  ]
+}

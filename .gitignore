@@ -1,15 +1,19 @@
-# Node
-node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+# Node modules
+diabetes-lifestyle-frontend/node_modules/
+diabetes-lifestyle-backend/node_modules/
 
-# Builds
-dist/
-build/
+# Build output
+diabetes-lifestyle-frontend/dist/
+diabetes-lifestyle-backend/dist/
+
+# Environment files
+*.env
 
 # Logs
-*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Environment
-.env
+# VS Code
+.vscode/
